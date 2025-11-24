@@ -6,7 +6,7 @@ INCLUDES	:= -Iincludes
 SRC_DIR		:= src
 OBJ_DIR		:= obj
 
-# --- colores ---
+# --- colores --- - 
 GREEN		:= \033[0;92m
 CYAN		:= \033[0;96m
 DEF_COLOR	:= \033[0;39m
