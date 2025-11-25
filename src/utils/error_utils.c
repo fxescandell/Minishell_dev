@@ -1,6 +1,6 @@
 #include "minishell.h"
 
-int print_error(const char *cmd; const char *msg)
+int	print_error(const char *cmd, const char *msg)
 {
     if (cmd && msg)
     {
@@ -27,7 +27,7 @@ int print_error(const char *cmd; const char *msg)
     return (1);
 }
 
-int exit_whit_error(const char *msg, it code)
+int exit_whit_error(const char *msg, int code)
 {
     if(msg)
     {

@@ -28,5 +28,5 @@ void    clean_shell(t_shell *shell)
         return ;
     clean_runtime_state(shell);
     clean_enviroment(shell);
-    rl_clean_history();
+    rl_clear_history();
 }

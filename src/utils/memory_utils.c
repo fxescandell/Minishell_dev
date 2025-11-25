@@ -1,7 +1,9 @@
-#include "minishell"
+#include "minishell.h"
 
 void  *safe_malloc(size_t size)
 {
+   void	*ptr;
+
    ptr = malloc(size);
    if (!ptr)
    {
@@ -20,7 +22,8 @@ void  free_string_array(char **array)
    i = 0;
    while(array[i])
    {
-      free(arrai[i]);
+      printf("Liberando: %s\n", array[i]);
+      free(array[i]);
       i++;
    }
    free(array);

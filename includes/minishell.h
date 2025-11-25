@@ -31,7 +31,7 @@ typedef struct s_redir
 typedef struct s_cmd
 {
     char        **argv;
-    t_refir     *redirs;
+    t_redir     *redirs;
     int         redir_count;    
 }   t_cmd;
 
@@ -77,6 +77,20 @@ typedef struct s_pipe_ctx
     int     fd_in;
     int     pipefd[2];
     pid_t   last_pid;
-}   t_pipe_ctx
+}   t_pipe_ctx;
+
+
+
+
+void    clean_shell(t_shell *shell);
+void    clean_child(t_shell *shell);
+
+int exit_whit_error(const char *msg, int code);
+int print_error(const char *cmd, const char *msg);
+
+
+void  *safe_malloc(size_t size);
+void  free_string_array(char **array);
+
 
 #endif

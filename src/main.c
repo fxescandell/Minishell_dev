@@ -20,7 +20,10 @@ static void init_shell(t_shell *shell, char **envp)
     (void)envp;
     shell->envp = NULL;
     shell->last_status = 0;
-    shell->runtime = 1;
+    shell->running = 1;
+    shell->current_pipeline = NULL;
+    shell->current_line = NULL;
+    shell->current_segments = NULL;
     init_terminal(shell);
 }
 
